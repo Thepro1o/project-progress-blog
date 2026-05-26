@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Progress Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📊 Project Progress Blog</h1>
+                <p class="subtitle">Tracking my year-long project journey</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- New Post Form -->
+            <section class="new-post-section">
+                <h2>Add New Progress Update</h2>
+                <form id="postForm" class="post-form">
+                    <div class="form-group">
+                        <label for="postTitle">Title</label>
+                        <input type="text" id="postTitle" placeholder="e.g., Week 1 - Initial Setup" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postDate">Date</label>
+                        <input type="date" id="postDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postCategory">Category</label>
+                        <select id="postCategory">
+                            <option value="update">Update</option>
+                            <option value="milestone">Milestone</option>
+                            <option value="challenge">Challenge</option>
+                            <option value="learning">Learning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postContent">Content</label>
+                        <textarea id="postContent" placeholder="Write your progress update here..." rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">📝 Add Post</button>
+                </form>
+            </section>
+
+            <!-- Posts Display -->
+            <section class="posts-section">
+                <div class="posts-header">
+                    <h2>Progress Posts</h2>
+                    <div class="filter-controls">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="update">Update</option>
+                            <option value="milestone">Milestone</option>
+                            <option value="challenge">Challenge</option>
+                            <option value="learning">Learning</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button id="clearAllBtn" class="btn btn-danger">🗑️ Clear All</button>
+                    </div>
+                </div>
+
+                <div id="postsContainer" class="posts-container">
+                    <p class="no-posts">No posts yet. Start tracking your progress! 🚀</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Keep pushing! Your year-long project is worth it. 💪</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
